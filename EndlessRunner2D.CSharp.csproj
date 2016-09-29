@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\BackgroundScroller.cs" />
+    <Compile Include="Assets\_Scripts\PauseMenuScript.cs" />
+    <Compile Include="Assets\_Scripts\PlatFormMove.cs" />
+    <Compile Include="Assets\_Scripts\PlatformGenerate.cs" />
     <Compile Include="Assets\_Scripts\SpriteBGScroller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

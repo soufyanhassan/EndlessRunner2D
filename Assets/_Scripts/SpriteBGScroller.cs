@@ -3,27 +3,19 @@ using System.Collections;
 
 public class SpriteBGScroller : MonoBehaviour
 {
-    [SerializeField]private float _speed;
-    private Vector3 _newPos = new Vector3(60, 0, 0);
-    //[SerializeField]private float tileSizeX;
-
-    private Vector3 _startPos;
-
-	void Start ()
-    {
-        _startPos = transform.position;
-	}
+    [SerializeField] private float _speed; //het snelheid tijdens het scrollen van het background
+    private Vector3 _newPos = new Vector3(50, 0, 0); //het positie dat het background spawnt
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //float _newPos = Mathf.Repeat(Time.time * _speed, tileSizeX);
-        //transform.position = _startPos + Vector3.left * _newPos;
+        //Voor zorgen dat het background naar links gaat scrollen
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
 	}
 
     void OnBecameInvisible()
     {
+        //als het background niet in beeld is, voor zorgen dat het helemaal naar achter spawnt
         transform.position += _newPos;
     }
 }
