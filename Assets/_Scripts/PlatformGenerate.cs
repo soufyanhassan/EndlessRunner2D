@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlatformGenerate : MonoBehaviour
 {
-    [SerializeField] private int maxPlatforms = 10; //aantal Platforms dat wordt gespawned
+    [SerializeField] private int maxPlatforms = 50; //aantal Platforms dat wordt gespawned
     [SerializeField] private GameObject platform; //het Platform zelf invoegen
     [SerializeField] private float horizontalMin = 7.5f; //het minimale horizontale afstand tussen de Platforms
     [SerializeField] private float horizontalMax = 14f; //het maximale horizontale afstand tussen de Platforms
@@ -21,13 +21,14 @@ public class PlatformGenerate : MonoBehaviour
 
     void Spawn()
     {
-        for (int i = 0; i < maxPlatforms; i++) //als i kleiner is dan maxPlatforms (10) 
+        for (int i = 0; i < maxPlatforms; i++) //als i kleiner is dan maxPlatforms 
         {
             //Voor zorgen dat de Platforms tussen de minimale en de maximale positie kan zetten
             Vector2 randomPosition = originPosition + new Vector2(Random.Range(horizontalMin, horizontalMax), Random.Range(verticalMin, verticalMax));
             //het spawnen/instantieren van de Platforms
             GameObject _platform = Instantiate(platform, randomPosition, Quaternion.identity) as GameObject;
-            _platform.AddComponent<PlatFormMove>();
+            //het script "PlatFormMove" toevoegen naar het script
+            _platform.AddComponent<PlatformMove>();
 
         }
     }
