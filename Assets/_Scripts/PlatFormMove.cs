@@ -16,8 +16,9 @@ public class PlatformMove : MonoBehaviour
 	void Update ()
     {
         transform.Translate(-Vector3.right * _speed * Time.deltaTime); //voor zorgen dat het naar LINKS gaat
-        if(transform.position.x < -12) //als het x positie kleiner is dan -12
+        if(transform.position.x < -13) //als het x positie kleiner is dan -3
         {
+            _newPos = new Vector3(Random.Range(30, 35), 0f, 0f);
             transform.position += _newPos; //verplaatsen naar nieuwe x positie
         }
 	}
