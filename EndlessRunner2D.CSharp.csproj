@@ -67,18 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\BackgroundScroller.cs" />
-    <Compile Include="Assets\_Scripts\DatabaseScript.cs" />
     <Compile Include="Assets\_Scripts\PauseMenuScript.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\_Scripts\PickupPoints.cs" />
     <Compile Include="Assets\_Scripts\PlatformGenerate.cs" />
     <Compile Include="Assets\_Scripts\PlatformMove.cs" />
     <Compile Include="Assets\_Scripts\ScoreManager.cs" />
-=======
-    <Compile Include="Assets\_Scripts\PlatFormMove.cs" />
-    <Compile Include="Assets\_Scripts\PlatformGenerate.cs" />
-    <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
->>>>>>> c071ba33bfd4c425d64952411cc114beaca154bf
     <Compile Include="Assets\_Scripts\SpriteBGScroller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

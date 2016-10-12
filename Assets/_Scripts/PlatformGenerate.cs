@@ -29,7 +29,7 @@ public class PlatformGenerate : MonoBehaviour
             GameObject _platform = Instantiate(platform, randomPosition, Quaternion.identity) as GameObject;
             //het script "PlatformMove" toevoegen naar het script
             _platform.AddComponent<PlatformMove>();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 }
