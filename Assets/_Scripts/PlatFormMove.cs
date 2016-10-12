@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlatformMove : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1.5f; //het snelheid die de Platforms gaat
+    [SerializeField] private float _speed = 2.5f; //het snelheid die de Platforms gaat
     private Vector3 _newPos = new Vector3(30, 0, 0); //het positie dat de platforms spawnt
 
     // Use this for initialization
