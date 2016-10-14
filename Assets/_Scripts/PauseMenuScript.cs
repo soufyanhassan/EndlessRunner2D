@@ -3,9 +3,7 @@ using System.Collections;
 
 public class PauseMenuScript : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseMenuPanel; //de panel waar de pauze menu is gemaakt
-    private bool isPaused = false; //een boolean isPaused is "false"
-
+    private bool isPaused; //een boolean isPaused is "false"
 
     void Start ()
     {
@@ -14,11 +12,11 @@ public class PauseMenuScript : MonoBehaviour
 	
 	void Update ()
     {
-	    if(Input.GetKeyUp(KeyCode.Escape) && !isPaused)
+	    if(Input.GetKeyDown(KeyCode.Escape) || !isPaused)
         {
             PauseGame(); //de functie PauseGame() wordt aangeroepen
         }
-        else if (Input.GetKey(KeyCode.Escape) && !isPaused)
+        else if (Input.GetKeyUp(KeyCode.Escape) || !isPaused)
         {
             UnpauseGame(); //de functie UnpauseGame() wordt aangeroepen
         }

@@ -18,24 +18,24 @@ public class ScoreManager : MonoBehaviour
     private float pointsPerSecond;
     public bool scoreIncrease;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         if (PlayerPrefs.HasKey("HighScore"))
         {
             highScoreCount = PlayerPrefs.GetFloat("HighScore");
         }
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (scoreIncrease)
         {
             scoreCount += pointsPerSecond * Time.deltaTime;
         }
-        
-        if(scoreCount > highScoreCount)
+
+        if (scoreCount > highScoreCount)
         {
             highScoreCount = scoreCount;
             PlayerPrefs.SetFloat("HighScore", highScoreCount);
@@ -43,7 +43,7 @@ public class ScoreManager : MonoBehaviour
 
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         highScoreText.text = "High Score: " + Mathf.Round(highScoreCount);
-	}
+    }
 
     public void AddScore(int pointsAdd)
     {

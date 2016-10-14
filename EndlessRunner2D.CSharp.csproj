@@ -67,8 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\BackgroundScroller.cs" />
+    <Compile Include="Assets\_Scripts\ChangeScene.cs" />
     <Compile Include="Assets\_Scripts\PauseMenuScript.cs" />
-    <Compile Include="Assets\_Scripts\PickupPoints.cs" />
     <Compile Include="Assets\_Scripts\PlatformGenerate.cs" />
     <Compile Include="Assets\_Scripts\PlatformMove.cs" />
     <Compile Include="Assets\_Scripts\ScoreManager.cs" />

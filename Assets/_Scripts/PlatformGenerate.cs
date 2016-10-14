@@ -9,8 +9,7 @@ public class PlatformGenerate : MonoBehaviour
     [SerializeField] private float horizontalMax = 14f; //het maximale horizontale afstand tussen de Platforms
     [SerializeField] private float verticalMin = -6f; //het minimale verticale afstand tussen de Platforms
     [SerializeField] private float verticalMax = 6; //het maximale verticale afstand tussen de Platforms
-    [SerializeField] private float _distanceBetweenMin;
-    [SerializeField] private float _distanceBetweenMax;
+
     private Vector2 originPosition; //het positie dat de Platforms spawnt
 
     void Start()
@@ -29,7 +28,7 @@ public class PlatformGenerate : MonoBehaviour
             GameObject _platform = Instantiate(platform, randomPosition, Quaternion.identity) as GameObject;
             //het script "PlatformMove" toevoegen naar het script
             _platform.AddComponent<PlatformMove>();
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.25f);
         }
     }
 }
