@@ -4,19 +4,13 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField]
-    private Text scoreText;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text highScoreText;
+    [SerializeField] private float scoreCount;
 
-    [SerializeField]
-    private Text highScoreText;
-    public float scoreCount;
-
-    [SerializeField]
-    private float highScoreCount;
-
-    [SerializeField]
-    private float pointsPerSecond;
-    public bool scoreIncrease;
+    [SerializeField] private float highScoreCount;
+    [SerializeField] private float pointsPerSecond;
+    [SerializeField] private bool scoreIncrease;
 
     // Use this for initialization
     void Start()
